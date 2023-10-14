@@ -1,0 +1,12 @@
+# Especificar a versão do docker-compose
+version: '3'
+
+# Definir os serviços (contêineres) da aplicação
+services:
+  # Serviço da aplicação FastAPI
+  web:
+    # Construir a imagem a partir do Dockerfile
+    build: .
+    # Mapear a porta 8000 do contêiner para a porta 8000 da máquina local
+    ports:
+      - "8000:8000"
